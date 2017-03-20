@@ -4,17 +4,16 @@
 \alias{getCSRRating}
 \title{get CSR rating from a website}
 \usage{
-getCSRRating(startPage, endPage, date = "2015-12-31", proxy = NULL)
+getCSRRating(startPage, endPage, year = 2015, proxy = FALSE)
 }
 \arguments{
 \item{startPage}{on Which page you want to start, default is 1}
 
 \item{endPage}{On which page you want to stop scrapping}
 
-\item{date}{represents the date is until which date, usually it's the last day of a year
-e.g., "2015-12-31" for the date of year 2015, "2014-12-31" for the date of year 2014}
+\item{year}{In which year you want the rank}
 
-\item{proxy}{the proxy, default is NULL}
+\item{proxy}{whether use the proxy, default is FALSE}
 }
 \value{
 A table of CSR ratings collected from your input page
@@ -23,12 +22,14 @@ A table of CSR ratings collected from your input page
 get CSR rating from a website
 }
 \details{
-Get CSR ratings of different companies from http://stockdata.stock.hexun.com/zrbg/
+Get CSR ratings and reports of different companies from http://stockdata.stock.hexun.com/zrbg/
 }
 \examples{
 \dontrun{
 # get first two pages of CSR ratings in 2015
-getCSRRating(1,2)
+getCSRRating(1,3)
 }
 }
-
+\references{
+www.hexun.com
+}

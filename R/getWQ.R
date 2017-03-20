@@ -4,7 +4,6 @@
 
 
 #' get PPP list from a single page
-#' @param url the url of CSR Rating, usually the default website
 #'
 #' @param year In which year you would like to scrape
 #' @param week In which week you would like to scrape
@@ -16,11 +15,15 @@
 #' @importFrom httr GET timeout content
 #' @importFrom rvest html_table %>%
 #' @importFrom xml2 read_html
+#' @references
+#' http://datacenter.mep.gov.cn/report/getCountGraph.do?type=runQianWater
 #' @export
 # @examples
 # add(1, 1)
 # add(10, 1)
-getWaterQ_MEP_all_unit <- function(url, year, week, station1, station2, proxy = NULL) {
+getWaterQ_MEP_all_unit <- function(year, week, station1, station2, proxy = NULL) {
+  #url <- 'http://datacenter.mep.gov.cn/report/water/water.jsp?year=2016&wissue=45&x=29&y=6'
+  url <- 'http://datacenter.mep.gov.cn/report/getCountGraph.do?type=runQianWater'
   res <- GET(url,
              query = list(year = year,
                           wissue = week), use_proxy(proxy[1, 1], proxy[1, 2]))
@@ -44,27 +47,31 @@ getWaterQ_MEP_all_unit <- function(url, year, week, station1, station2, proxy = 
 #' get PPP list from a single page
 #'
 #' @param year In which year you would like to scrape
-#' @param week In which week you would like to scrape
+#' @param week In which week you would like to scrape, can be an array, like 3:5
 #' @param station1 the start station index on the page
 #' @param station2 the end station index on the page
+#' @param proxy Whether to use proxy, default is FALSE
 #' @details
-#' Get monitoring data of different stations from Minitsry of Environmental Protection of China. Using this function
+#' Get monitoring data of different stations from Minitsry of Environmental Protection of China (http://datacenter.mep.gov.cn/report/getCountGraph.do?type=runQianWater). Using this function
 #' you will get data of all the stations. Since the number of stations vary with time, using this function, you have
 #' to make sure that within the period you are scrapping, the number of stations keep consistant.
+#' @references
+#' http://datacenter.mep.gov.cn/report/getCountGraph.do?type=runQianWater
 #' @export
+#' @importFrom data.table rbindlist
 #' @examples
 #'
 #' \dontrun{
-#' # get data from station1 to station5 of the 3rd week of 2016
-#' getWaterQ_MEP_all(2016, 3, 1, 5)
+#' # get data from 1st station to 5th station of the 3rd week of 2016
+#' a <- getWaterQ_MEP_all(2016, 3, 1, 5)
+#'
 #' }
 #'
 
-getWaterQ_MEP_all <- function(year, week, station1, station2){
+getWaterQ_MEP_all <- function(year, week, station1, station2, proxy = FALSE){
   message('Since the number of monitoring stations changes with time, so make sure in your
           scraping period, the number of monitoring stations is consistent.')
 
-  url <- 'http://datacenter.mep.gov.cn/report/water/water.jsp?year=2016&wissue=45&x=29&y=6'
   if (length(year) != 1) message('Caution!!! the result can be wrong if you input more than 1 year, since the number
                                  of stations change with time.')
   times <- 0
@@ -74,14 +81,20 @@ getWaterQ_MEP_all <- function(year, week, station1, station2){
 
   # deal with proxy
   proxyIndex <- 1
-  proxyPool <- getProxy()[,1:2]
+  if (proxy == TRUE) {
+    proxyPool <- getProxy()[,1:2]
+  } else if (proxy == FALSE) {
+    proxyPool <- NULL
+  } else {
+    message("Wrong input, it's TRUE or FALSE")
+  }
   page <- min(week)
 
   repeat {
 
     table <- tryCatch({
 
-      getWaterQ_MEP_all_unit(url, year = year, week = page, station1 = station1,
+      getWaterQ_MEP_all_unit(year = year, week = page, station1 = station1,
                              station2 = station2, proxy = proxyPool[proxyIndex, ])
     },error = function(cond) {
       message(paste('\n', Sys.time(), " Proxy doestn't work or ...\n"))
@@ -105,7 +118,7 @@ getWaterQ_MEP_all <- function(year, week, station1, station2){
         totalTable <- table
       } else {
         # bind the new list to the total list
-        totalTable <- rbind(totalTable, table)
+        totalTable <- rbindlist(totalTable, table)
       }
 
       times <- times + 1

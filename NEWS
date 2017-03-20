@@ -1,3 +1,31 @@
+gfer 0.1.6
+==========
+Date: 2017-3-12
+
+- add getTickers, getMktCap, getIndex and getExchange to deal with stock information including market capitalization, listed location and index they belong to
+- add reference and source
+
+
+
+gfer 0.1.5
+==========
+Date: 2017-2-19
+
+- add proxy option to all functions
+- apply data table
+
+
+
+
+gfer 0.1.4
+==========
+Date: 2016-12-20
+
+- add readme file, and a little change in description
+
+
+
+
 gfer 0.1.3
 ==========
 Date: 2016-12-18

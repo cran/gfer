@@ -1,8 +1,8 @@
 Package: gfer
 Type: Package
 Title: Green Finance and Environmental Risk
-Version: 0.1.3
-Date: 2016-12-18
+Version: 0.1.6
+Date: 2017-3-12
 Authors@R: person("Yuanchao", "Xu", email = "xuyuanchao37@gmail.com",
                   role = c("aut", "cre"))
 Description: Focuses on data collecting and analyzing in green finance and environmental 
@@ -12,13 +12,15 @@ Description: Focuses on data collecting and analyzing in green finance and envir
 Encoding: UTF-8
 License: GPL-2
 LazyData: LazyData: true
-Imports: rvest, xml2, jsonlite, httr, stringi, V8
-RoxygenNote: 5.0.1
-URL: http://yuanchao-xu.github.io/gfer/
+Imports: rvest, xml2, jsonlite, httr, stringi, V8, data.table
+RoxygenNote: 6.0.1
+URL: https://yuanchao-xu.github.io/gfer/
 BugReports: https://github.com/Yuanchao-Xu/gfer/issues
 Repository: CRAN
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2016-12-19 09:37:26 UTC; User
+Packaged: 2017-03-20 14:40:04 UTC; Yuanchao
 Author: Yuanchao Xu [aut, cre]
 Maintainer: Yuanchao Xu <xuyuanchao37@gmail.com>
-Date/Publication: 2016-12-19 15:56:02
+Date/Publication: 2017-03-20 17:34:26 UTC
