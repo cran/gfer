@@ -106,3 +106,5 @@ getTickers <- function(corpNames) {
   return(res)
 
 }
+
+
