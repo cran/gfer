@@ -1,8 +1,17 @@
+gfer 0.1.8
+==========
+Date: 2017-8-16
+
+- added getBasicData to extract NBS data, gferplot included in the package
+- works with the shiny app waternomics plot, adding circilized plot and scatter plot of waternomics
+
+
+
 gfer 0.1.7
 ==========
 Date: 2017-7-2
 
-- add interface to national statistics, based on rstatscn. Because rstatscn doesn't have a EN version, so cannot be called directly, included in gfer
+- add interface to national statistics, based on rstatscn. Because rstatscn doesn't have a EN version, so cannot be called directly, included in gfer, added getBasicData to extract NBS data
 
 
 
