@@ -1,8 +1,9 @@
-7186dc7def87e514df4d90e457b6bd95 *DESCRIPTION
-4478be92296fa8b4f96ed0a38b949688 *NAMESPACE
-687f40477802c5c2c927fa653c6efef3 *NEWS
+2952351c8a8c5e8f9b961594330c0058 *DESCRIPTION
+a6f32aaf628ee922b22984b0ce4827fe *NAMESPACE
+b6f1c70dcc06fcf6403f6fe7a181e1bf *NEWS
 d4a6332b5365dc038686f5d315f3c9e2 *R/data.R
 eeab9084a2d9db9f81a13a069bcdf643 *R/getCSRRating.R
+6a325032bc06fb0a9cdd1332d5ad2d1e *R/getENNames.R
 11907972781dc2942bdc68ff27d91aea *R/getExchange.R
 6e86b1f6745e91a2c38261d07313bc08 *R/getIndex.R
 d6db6c85b7450406048b52a01e151d74 *R/getMktCap.R
@@ -13,13 +14,13 @@ af33c3681758589272e6e906dabc107c *R/getTickers.R
 f15649e6fd6913dae1210ee1f410d43c *R/getWQ.R
 1faf6dde98b42c346ba7180114e54bbd *R/listedInfo.R
 bfdffa8505a6036683d9eff1f639c5b8 *R/plotChord.R
-5a2155eedba42c5b4f60c9d5df45bc22 *R/plotScatterPie.R
+6ce2619e184a6b8d6f1f3f34d5d7da4f *R/plotScatterPie.R
 b41d301c725b3129a8f198e4e10e72b3 *README.md
 8a1b1fc0fa21062deeac59ab130438f3 *build/vignette.rds
 1d6b773e7c600073dea994a49c933a90 *data/CM.rda
 fac8d54f55a6470223b8f4147aa063f3 *data/GDPmix.rda
 23ed7505f905b60d011ed9a33539cf82 *inst/doc/gfer.Rmd
-2a3e5e5e4c944653a95d7fad1b5664df *inst/doc/gfer.pdf
+e526e66407e83c1bfdfd5f54dcd51456 *inst/doc/gfer.pdf
 84a370d24ec2f1cc6cfcbc6e1807e8c1 *man/GDPmix.Rd
 af0accc77a281b74cb1b93780a7375d3 *man/checkHttpStatus.Rd
 ed2e54ef415bd9fe193cc5e927b4d1e1 *man/cm.Rd
@@ -27,6 +28,8 @@ b36000041778579e789dcd87e7dabbd8 *man/dataJson2df.Rd
 cc2391e2a2d40a5101afc5338ec9d839 *man/genDfwds.Rd
 2c6bd17c25807a34e6896c5573440ec2 *man/getCSRRating.Rd
 390a3dbb994f3d07154f3b94ba5f8917 *man/getCSRRating_unit.Rd
+3881743b91b56ed6900ef10836048c9d *man/getENNames.Rd
+dc9a1aae1b4470368a5033345851cd44 *man/getENNames_unit.Rd
 6d31f61425454851a43204dcd9de118d *man/getExchange.Rd
 582ef1d1ced37ea68c25234b3b7513a0 *man/getHisMktCap.Rd
 85e2d77fd9d3a13fdbd1ec67b6adbf24 *man/getHisMktCap_unit.Rd
@@ -47,7 +50,7 @@ c4f236eeaa0b0e8fc6076dd9c86aa238 *man/getWaternomicsData_NBS.Rd
 a57c3baf900c30920dbdd62c930d81f5 *man/is.listed.Rd
 12e569281a9a064e13358cc161319e2f *man/milSec.Rd
 7567ce9c637e226c50437d57bb947318 *man/plotChord.Rd
-940dfb0888b3e1e5b5a950691d3bfa0e *man/plotScatterPie.Rd
+5e7dd1120e94acca1f8e32704912d071 *man/plotScatterPie.Rd
 0d95edfff1d870647cb3a32ae633eb9a *man/statscnDbs.Rd
 6875c886c376eb8db32d4739cee64f78 *man/statscnQueryData.Rd
 08f191332480a0e63a1a7f7b96f91e52 *man/statscnQueryLastN.Rd
