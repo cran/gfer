@@ -1,8 +1,8 @@
 Package: gfer
 Type: Package
 Title: Green Finance and Environmental Risk
-Version: 0.1.9
-Date: 2017-10-31
+Version: 0.1.10
+Date: 2018-3-10
 Authors@R: person("Yuanchao", "Xu", email = "xuyuanchao37@gmail.com",
                   role = c("aut", "cre"))
 Description: Focuses on data collecting, analyzing and visualization in green finance and environmental 
@@ -22,7 +22,7 @@ Repository: CRAN
 Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2017-10-31 09:24:48 UTC; User
+Packaged: 2018-03-10 15:44:12 UTC; Yuanchao
 Author: Yuanchao Xu [aut, cre]
 Maintainer: Yuanchao Xu <xuyuanchao37@gmail.com>
-Date/Publication: 2017-10-31 10:14:28 UTC
+Date/Publication: 2018-03-11 05:06:39 UTC
