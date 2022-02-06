@@ -1,13 +1,13 @@
-f666f3dcee131fa72916294e68e21876 *DESCRIPTION
-37a22cd7912fedd351bcaa2dbab1b757 *NAMESPACE
-49cd4cf140223c2215ca6ed3df28093d *NEWS
+d95471b0008e1416e8fb9b12805eabaf *DESCRIPTION
+19ef3df04528d26509a945d49439c4bc *NAMESPACE
+33a7499f7492a1ed8036cfdb3de148ec *NEWS
 0cdccf8683eec39deb04aa80f5d8a93f *R/data.R
 ff04c3947c54de5fd044e33cdffb8b50 *R/getCSRRating.R
 ffec793850222fa317cfa627920d96c3 *R/getENNames.R
 380be7dbffd0b22768db41ee2fade929 *R/getExchange.R
 6291786a647e3214a38f6770f49e45bc *R/getIndex.R
 37ddac1371ca7bc07e4ebf6ddf4e07b7 *R/getMktCap.R
-5ed751c2a1bee5123cc43b18019ebd4c *R/getNBS.R
+f25a10a1743657ba6a05d328bc4110fb *R/getNBS.R
 db972b938450e39aa0d5d714a74119ce *R/getPPPList.R
 0535d4f7434549b2a75beffd0fa5b53f *R/getProxy.R
 5074d073e9c7a5c26b364abadb6e4b21 *R/getTickers.R
@@ -16,11 +16,11 @@ a0abc7726e19059fc3a1892998018d67 *R/getWQ.R
 d8975edc4bd72f1b4705532c4e8b34f8 *R/plotChord.R
 33c8ba175b947cbcc31d6a9da1c64f43 *R/plotScatterPie.R
 9b09b4d4609bfbccf169e2554107cedf *README.md
-5d671ec5265b42a7ec340e62443d4877 *build/vignette.rds
+413e8551f3de1252e5671c395c3574b3 *build/vignette.rds
 1d6b773e7c600073dea994a49c933a90 *data/CM.rda
 fac8d54f55a6470223b8f4147aa063f3 *data/GDPmix.rda
 51fa5e62d96b20f9b8dc4edc31159275 *inst/doc/gfer.Rmd
-59d3843fbb1fc77508c50e7a281ecea5 *inst/doc/gfer.pdf
+3bdef1385ff6aafd3b8c2965d70c6cbe *inst/doc/gfer.pdf
 14e5ee452e884cd4256e64aa328974ec *man/GDPmix.Rd
 9fc7dedf258bc82b0be4143d4c6e19f7 *man/checkHttpStatus.Rd
 a7e81811356cd546ea04520aa8db1685 *man/cm.Rd
@@ -57,5 +57,4 @@ ea4c1f967be4c1d20e03813fe597bc18 *man/statscnDbs.Rd
 2918bcb6bc55e69729e431ea7341d490 *man/statscnQueryZb.Rd
 689f58bbfc04a50186c96a540fecc5fe *man/statscnRegions.Rd
 91c33063cc68d49c202ffbff5f4df062 *man/statscnRowNamePrefix.Rd
-c7272650ca1138c0c5b384717d4504ef *man/updateNBS.Rd
 51fa5e62d96b20f9b8dc4edc31159275 *vignettes/gfer.Rmd
